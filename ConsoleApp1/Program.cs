@@ -6,51 +6,61 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+
+
     class Program
     {
+
+
+
         static void Main(string[] args)
-        {
-           
+        { List<Alumno> alumnos = new List<Alumno>();
+
+            Alumno alumno1 = new Alumno();
+            alumno1.Nombre = "jose";
+            alumno1.Materias.Add(new Materia("Historia", "SDGSDF"));
+            alumno1.Materias.Add(new Materia("Civismo", "DFS3234"));
+            alumno1.Materias.Add(new Materia("Español", "DFSDF2342"));
+            alumno1.Materias.Add(new Materia("Matematicas", "FSDFDSF423"));
+
+            alumnos.Add(alumno1);
+
+            Alumno alumno2 = new Alumno();
+
+            alumno2.Nombre = "juan";
+            alumno2.Materias.Add(new Materia("Historia", "SDGSDF"));
+            alumno2.Materias.Add(new Materia("Civismo", "DFS3234"));
+            alumno2.Materias.Add(new Materia("Español", "DFSDF2342"));
+            alumno2.Materias.Add(new Materia("Matematicas", "FSDFDSF423"));
+            alumnos.Add(alumno2);
+
+            Alumno alumno3 = new Alumno();
+
+            alumno3.Nombre = "Eduardo";
+            alumno3.Materias.Add(new Materia("Historia", "SDGSDF"));
+            alumno3.Materias.Add(new Materia("Civismo", "DFS3234"));
+            alumno3.Materias.Add(new Materia("Español", "DFSDF2342"));
+            alumno3.Materias.Add(new Materia("Matematicas", "FSDFDSF423"));
+            alumnos.Add(alumno3);
+            Alumno alumno4 = new Alumno();
+
+            alumno4.Nombre = "Carlos";
+            alumno4.Materias.Add(new Materia("Historia", "SDGSDF"));
+            alumno4.Materias.Add(new Materia("Civismo", "DFS3234"));
+            alumno4.Materias.Add(new Materia("Español", "DFSDF2342"));
+            alumno4.Materias.Add(new Materia("Matematicas", "FSDFDSF423"));
+            alumnos.Add(alumno4);
 
 
-
-
-
-
-
-            Alumno alumno = new Alumno();
-
-           // alumno.Nombre = "Juan Perez";
-           // alumno.Matricula = "149240";
-            Materia matematicas = new Materia();
-            matematicas.Nombre = "Matematicas";
-            matematicas.Identificador = "MT329DSS";
-            alumno.Materias.Add(new Materia());
-            alumno.Materias.Add(matematicas);
-            
-            alumno.Materias.Add(new Materia());
-            alumno.Materias[0].Nombre = "Historia";
-            alumno.Materias[0].Identificador = "H32312312";
-
-            alumno.Materias[2].Nombre = "Español";
-            alumno.Materias[2].Identificador = "H123123";
-            alumno.Class1s.Add(new Class1());
-            alumno.Class1s[0].Nombre = "juan";
-           // alumno.Materias.RemoveAt(1);
-          //  Console.WriteLine("Alumno " + alumno.Nombre);
-            Console.WriteLine("NUMERO DE MATERIAS " + alumno.Materias.Count);
-           /* Console.WriteLine("Materia " + alumno.Materias[0].Nombre);
-            Console.WriteLine("Materia " + alumno.Materias[1].Nombre);*/
-
-         foreach(Materia materia in alumno.Materias)
+            foreach (Alumno elemento in alumnos)
             {
-                Console.WriteLine("Materia " + materia.Nombre);
+                Console.WriteLine("Nombre: " + elemento.Nombre);
+                foreach (Materia materia in elemento.Materias)
+                {
+                    Console.WriteLine("Materia: " + materia.Nombre);
+                }
             }
-
             Console.ReadLine();
-
-            
-        
         }
     }
 }

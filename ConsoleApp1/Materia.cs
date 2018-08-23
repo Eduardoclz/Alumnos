@@ -8,7 +8,21 @@ namespace ConsoleApp1
 {
     class Materia
     {
-        public string Identificador { get; set; }
+      public string Identificador { get; set; }
         public string Nombre { get; set; }
+         
+        public Materia()
+        {
+            Nombre = "Materia nueva";
+            Identificador = "0";
+        }
+        public Materia(string nombre, string identificador)
+        {
+            Nombre =nombre;
+            Identificador = identificador;
+        }
+
     }
+
+
 }
